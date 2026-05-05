@@ -1,6 +1,7 @@
 # KTC v2 – Roadmap (Fase 1)
 
 ## 🧠 Filosofia
+
 - milestone piccole e chiare
 - task atomici
 - niente over-engineering
@@ -12,12 +13,14 @@
 ## 🟩 MILESTONE 1 — Setup progetto
 
 ### Obiettivo
+
 Repository pronta + ambiente stabile
 
 ### Task
+
 1. creare repository GitHub
 2. inizializzare progetto Next.js (App Router + TypeScript)
-3. configurare alias @/*
+3. configurare alias @/\*
 4. configurare struttura src/
 5. installare dipendenze base:
    - sass
@@ -42,9 +45,11 @@ Repository pronta + ambiente stabile
 ## 🟦 MILESTONE 2 — Design System (tokens)
 
 ### Obiettivo
+
 Base visiva globale
 
 ### Task
+
 1. creare struttura styles/
    - tokens/
    - foundations/
@@ -62,9 +67,11 @@ Base visiva globale
 ## 🟨 MILESTONE 3 — Componenti UI base
 
 ### Obiettivo
+
 Mini design system
 
 ### Task
+
 1. setup Storybook
 2. creare Button
 3. creare Typography (heading, paragraph, label)
@@ -80,9 +87,11 @@ Mini design system
 ## 🟧 MILESTONE 4 — Domain + dati mock
 
 ### Obiettivo
+
 Simulare contenuto reale
 
 ### Task
+
 1. definire types di dominio:
    - Project
 2. creare file mock data (es: projects.ts)
@@ -94,9 +103,11 @@ Simulare contenuto reale
 ## 🟥 MILESTONE 5 — Sections & Homepage
 
 ### Obiettivo
+
 Prima pagina reale
 
 ### Task
+
 1. creare HeroSection
 2. creare ProjectsPreviewSection
 3. creare AboutPreviewSection (opzionale)
@@ -110,9 +121,11 @@ Prima pagina reale
 ## 🟪 MILESTONE 6 — Pagine secondarie
 
 ### Obiettivo
+
 Navigazione base
 
 ### Task
+
 1. creare pagina Projects
 2. creare layout lista progetti
 3. creare pagina About
@@ -124,9 +137,11 @@ Navigazione base
 ## 🟫 MILESTONE 7 — Motion system
 
 ### Obiettivo
+
 Effetto wow
 
 ### Task
+
 1. creare MotionReveal
 2. creare StaggerContainer
 3. applicare animazioni alle sections
@@ -139,9 +154,11 @@ Effetto wow
 ## ⚫ MILESTONE 8 — Polish finale
 
 ### Obiettivo
+
 Rifinitura finale
 
 ### Task
+
 1. sistemare spacing globali
 2. uniformare typography
 3. fix piccoli bug UI
@@ -162,6 +179,7 @@ task → Codex → review → commit
 ---
 
 ## 🎯 Obiettivo fase 1
+
 - homepage forte
 - UI coerente
 - mini design system completo

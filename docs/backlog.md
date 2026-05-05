@@ -1,6 +1,7 @@
 # KTC v2 – Backlog iniziale
 
 ## 🧠 Visione generale
+
 - Rebuild del progetto KTC con approccio **design-first**
 - Obiettivo: passare da progetto tecnico (v1) a **prodotto coerente e curato (v2)**
 - Focus su qualità percepita, UX e coerenza visiva
@@ -10,6 +11,7 @@
 ---
 
 ## ⚙️ Stack tecnico
+
 - Next.js (App Router)
 - React
 - TypeScript
@@ -18,6 +20,7 @@
 - Storybook
 
 ### Filosofia
+
 - Poche librerie
 - Solo se necessarie
 - Component library custom
@@ -28,10 +31,12 @@
 ## 🎨 Design System
 
 ### Token & styling
+
 - CSS variables globali
 - SCSS Modules locali
 
 #### Convenzioni styling
+
 - BEM
 - Mobile-first
 - Breakpoints:
@@ -43,21 +48,25 @@
 - Nesting solo semantico
 
 ### Struttura componenti
+
 - components/ui → base
 - components → dominio
 
 Regole:
+
 - composizione, non duplicazione
 - layout libero
 
 ---
 
 ## 🧩 Component Philosophy
+
 - ui → generici
 - sections → sezioni pagina
 - motion → animazioni
 
 Principi:
+
 - no business logic nei componenti UI
 - composizione
 - semplicità
@@ -65,6 +74,7 @@ Principi:
 ---
 
 ## 🧱 Approccio
+
 - frontend-first
 - niente:
   - auth
@@ -78,6 +88,7 @@ Principi:
 ---
 
 ## 🖥️ Scope fase 1
+
 - Homepage semplice
 - Sezioni curate
 - Pagine:
@@ -87,6 +98,7 @@ Principi:
 ---
 
 ## ✨ Motion
+
 - fade-in
 - slide-up
 - scale leggero
@@ -94,17 +106,21 @@ Principi:
 - possibile glass effect
 
 Regole:
+
 - non animare tutto
 - creare pattern riutilizzabili
 
 ---
 
 ## 📚 Storybook
+
 Usato per:
+
 - componenti ui
 - motion base
 
 Non per:
+
 - pagine
 - sezioni complete
 
@@ -112,6 +128,7 @@ Non per:
 
 ## 📁 Struttura progetto
 
+```text
 src/
   app/
     layout.tsx
@@ -141,21 +158,27 @@ src/
 
   types/
   utils/
+```
 
 Note:
+
 - app sostituisce pages
 - niente main.tsx
 - niente msw
 - niente query
 
 Evoluzione futura:
+
+```text
 src/app/
   (site)/
   (dashboard)/
+```
 
 ---
 
 ## 🧩 Naming
+
 - PascalCase per componenti
 - PascalCase per file
 - lowercase per root folders
@@ -163,23 +186,27 @@ src/app/
 ---
 
 ## ⚙️ CI
+
 - npm ci
 - lint
 - typecheck
 - build
 
 Obiettivo:
+
 - codice sempre valido su main
 
 ---
 
 ## 🧪 Testing / Performance
+
 - NON ora
 - dopo fase UI
 
 ---
 
 ## 🤖 Codex Guidelines
+
 - seguire backlog
 - non aggiungere librerie
 - non anticipare backend
@@ -188,6 +215,7 @@ Obiettivo:
 ---
 
 ## ✅ Definition of Done
+
 - setup Next
 - struttura pronta
 - tokens
@@ -199,6 +227,7 @@ Obiettivo:
 ---
 
 ## 💡 Principi
+
 - semplicità
 - coerenza
 - no over-engineering
@@ -206,6 +235,7 @@ Obiettivo:
 ---
 
 ## 🚫 Evitare
+
 - backend subito
 - DS complesso
 - template pronti
@@ -213,6 +243,7 @@ Obiettivo:
 ---
 
 ## 🎯 Obiettivo fase 1
+
 - homepage forte
 - UI coerente
 - base solida
