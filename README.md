@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡️ KTC v2
 
-## Getting Started
+![Version](https://img.shields.io/github/v/release/ionutbirlad/ktc-v2)
+![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![SCSS Modules](https://img.shields.io/badge/SCSS%20Modules-CC6699?logo=sass&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?logo=framer&logoColor=white)
 
-First, run the development server:
+KTC v2 is a design-first frontend project built with Next.js, React, TypeScript, SCSS Modules, and Framer Motion. It focuses on a custom design system and component-driven architecture, evolving incrementally into a full-stack app with APIs, authentication, and advanced features.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Vision
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The goal of KTC v2 is to build a visually impactful and technically solid application starting from a strong frontend foundation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project follows a design-first and incremental approach:
 
-## Learn More
+- custom design system
+- reusable UI architecture
+- smooth interactions and motion
+- clean and maintainable codebase
+- minimal and controlled tech stack
 
-To learn more about Next.js, take a look at the following resources:
+Rather than over-engineering early, the focus is on building a polished foundation first, then progressively expanding the application into a more complete full-stack platform.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Tech Stack
 
-## Deploy on Vercel
+- Next.js (App Router)
+- React
+- TypeScript
+- SCSS Modules
+- Framer Motion
+- Storybook
+- GitHub Actions (CI)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏗 Architecture Principles
+
+The project follows a few core principles:
+
+- component-driven architecture
+- composition over duplication
+- incremental development
+- minimal external dependencies
+- scalable folder structure
+- clean separation between UI and domain components
+
+The project structure and development workflow are intentionally designed to evolve progressively without introducing unnecessary complexity in the early stages.
+
+---
+
+## 📁 Project Structure
+
+    src/
+      app/
+      assets/
+      components/
+        ui/
+        motion/
+        sections/
+      hooks/
+      layouts/
+      lib/
+      styles/
+        tokens/
+        foundations/
+      types/
+      utils/
+
+---
+
+## 🎨 Styling Approach
+
+- SCSS Modules
+- CSS variables for design tokens
+- BEM naming methodology
+- mobile-first approach
+- semantic nesting only
+- reusable motion patterns
+
+---
+
+## 🚀 Development Workflow
+
+The project is developed incrementally through:
+
+- roadmap-driven milestones
+- focused feature branches
+- pull request based workflow
+- automated CI checks
+- versioned releases
+
+---
+
+## 📌 Current Status
+
+Current phase:
+
+- foundation setup
+- design system implementation
+- UI architecture definition
+
+Next steps:
+
+- design tokens
+- base UI components
+- homepage sections
+- motion system
+
+---
+
+## 📄 Documentation
+
+Additional project context is available in:
+
+- `backlog.md`
+- `roadmap.md`
+- `AGENTS.md`
+
+---
+
+## ⚡️ Status
+
+Active development.
