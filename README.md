@@ -1,4 +1,4 @@
-# ⚡️ KTC v2
+# ⚡️ KTC
 
 ![Version](https://img.shields.io/github/v/release/ionutbirlad/project-ktc-v2)
 ![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
