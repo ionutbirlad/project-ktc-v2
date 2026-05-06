@@ -103,7 +103,14 @@ The PR description must follow this structure:
 - Based on roadmap.md
 - Only mention immediate next logical steps
 
-### 4. Style
+### 4. Issue linking
+
+- At the end of every PR description, add:
+  `Closes #<milestone-issue-number>`
+- Use the issue number associated with the current milestone
+- Since each chat corresponds to one milestone, infer the correct issue automatically from the current milestone context
+
+### 5. Style
 
 - Be concise and technical
 - Avoid fluff or generic descriptions
