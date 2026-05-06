@@ -1,6 +1,6 @@
 # ⚡️ KTC v2
 
-![Version](https://img.shields.io/github/v/release/ionutbirlad/ktc-v2)
+![Version](https://img.shields.io/github/v/release/ionutbirlad/project-ktc-v2)
 ![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
