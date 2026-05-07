@@ -19,7 +19,7 @@
   --p-scale-05: 24px;
   --p-scale-06: 32px;
   --p-scale-07: 40px;
-  --p-scale-08: 482px;
+  --p-scale-08: 48px;
   --p-scale-09: 64px;
   --p-scale-10: 72px;
 
@@ -43,26 +43,26 @@
    * ====================================== */
 
   /* Sizes */
-  --font-size-title-hero-sm: var(--font-scale-07);
-  --font-size-title-hero-md: var(--font-scale-08);
-  --font-size-title-hero-lg: var(--font-scale-09);
-  --font-size-title-page-sm: var(--font-scale-05);
-  --font-size-title-page-md: var(--font-scale-06);
-  --font-size-title-page-lg: var(--font-scale-07);
-  --font-size-title-subtitle-sm: var(--font-scale-05);
-  --font-size-title-subtitle-md: var(--font-scale-06);
-  --font-size-title-subtitle-lg: var(--font-scale-07);
+  --font-size-title-hero-sm: var(--p-scale-07);
+  --font-size-title-hero-md: var(--p-scale-08);
+  --font-size-title-hero-lg: var(--p-scale-09);
+  --font-size-title-page-sm: var(--p-scale-05);
+  --font-size-title-page-md: var(--p-scale-06);
+  --font-size-title-page-lg: var(--p-scale-07);
+  --font-size-subtitle-sm: var(--p-scale-05);
+  --font-size-subtitle-md: var(--p-scale-06);
+  --font-size-subtitle-lg: var(--p-scale-07);
 
-  --font-size-heading-sm: var(--font-scale-04);
-  --font-size-heading-md: var(--font-scale-05);
-  --font-size-heading-lg: var(--font-scale-06);
-  --font-size-subheading-sm: var(--font-scale-03);
-  --font-size-subheading-md: var(--font-scale-04);
-  --font-size-subheading-lg: var(--font-scale-05);
+  --font-size-heading-sm: var(--p-scale-04);
+  --font-size-heading-md: var(--p-scale-05);
+  --font-size-heading-lg: var(--p-scale-06);
+  --font-size-subheading-sm: var(--p-scale-03);
+  --font-size-subheading-md: var(--p-scale-04);
+  --font-size-subheading-lg: var(--p-scale-05);
 
-  --font-size-body-sm: var(--font-size-scale-02);
-  --font-size-body-md: var(--font-size-scale-03);
-  --font-size-body-lg: var(--font-size-scale-04);
+  --font-size-body-sm: var(--p-scale-02);
+  --font-size-body-md: var(--p-scale-03);
+  --font-size-body-lg: var(--p-scale-04);
 
   /* Weights */
   --font-weight-titles-regular: var(--p-weight-regular);
@@ -99,7 +99,7 @@
 
 @mixin subtitle {
   font-family: var(--p-family-sans);
-  font-size: var(--font-size-subtitle-page-md);
+  font-size: var(--font-size-subtitle-md);
   font-weight: var(--font-weight-titles-strong);
 }
 
@@ -121,6 +121,7 @@
   font-family: var(--p-family-sans);
   font-size: var(--font-size-body-md);
   font-weight: var(--font-weight-body-regular);
+  font-style: var(--font-style-body-normal);
 }
 
 @mixin body-strong {
@@ -131,6 +132,7 @@
 @mixin body-emphasis {
   @include body-base;
   font-weight: var(--font-weight-body-emphasis);
+  font-style: var(--font-style-body-emphasis);
 }
 
 @mixin body-small {
@@ -163,6 +165,7 @@
 }
 @mixin label-2 {
   @include body-base;
+  font-size: calc(var(--font-size-body-md) * 0.8);
   line-height: 1;
   white-space: nowrap;
 }
