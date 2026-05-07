@@ -40,9 +40,17 @@
   --radius-l: var(--p-size-400);
   --radius-full: var(--p-size-full);
 
-  /* Radius */
-  --radius-s: var(--p-size-100);
-  --radius-m: var(--p-size-200);
-  --radius-l: var(--p-size-400);
-  --radius-full: var(--p-size-full);
+  /* Gap */
+  --gap-xxs: var(--p-size-100);
+  --gap-xs: var(--p-size-200);
+  --gap-s: var(--p-size-300);
+  --gap-m: var(--p-size-400);
+  --gap-l: var(--p-size-600);
+  --gap-xl: var(--p-size-1600);
+
+  --gap-negative-xxs: var(--p-size-negative-100);
+  --gap-negative-xs: var(--p-size-negative-200);
+  --gap-negative-s: var(--p-size-negative-300);
+  --gap-negative-m: var(--p-size-negative-400);
+  --gap-negative-l: var(--p-size-negative-600);
 }
