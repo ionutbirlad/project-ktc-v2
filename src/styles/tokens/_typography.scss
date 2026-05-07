@@ -4,48 +4,116 @@
    * ====================================== */
 
   /* Font family */
-  --font-family-sans:
+  --p-family-sans:
     var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
-  --font-family-serif: var(--font-noto-serif), Georgia, "Times New Roman", serif;
-  --font-family-mono:
+  --p-family-serif: var(--font-noto-serif), Georgia, "Times New Roman", serif;
+  --p-family-mono:
     var(--font-roboto-mono), "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
+  /* Scales */
+  --p-scale-01: 12px;
+  --p-scale-02: 14px;
+  --p-scale-03: 16px;
+  --p-scale-04: 20px;
+  --p-scale-05: 24px;
+  --p-scale-06: 32px;
+  --p-scale-07: 40px;
+  --p-scale-08: 482px;
+  --p-scale-09: 64px;
+  --p-scale-10: 72px;
+
+  /* Weights */
+  --p-weight-thin: 100;
+  --p-weight-extra-light: 200;
+  --p-weight-light: 300;
+  --p-weight-regular: 400;
+  --p-weight-medium: 500;
+  --p-weight-semi-bold: 600;
+  --p-weight-bold: 700;
+  --p-weight-extra-bold: 800;
+  --p-weight-black: 900;
+
+  /* Styles */
+  --p-style-normal: normal;
+  --p-style-italic: italic;
+
+  /* ========================================
+   * Semantics
+   * ====================================== */
+
   /* Sizes */
-  --font-size-01: 12px;
-  --font-size-02: 14px;
-  --font-size-03: 16px;
-  --font-size-04: 20px;
-  --font-size-05: 24px;
-  --font-size-06: 32px;
-  --font-size-07: 40px;
-  --font-size-08: 482px;
-  --font-size-09: 64px;
-  --font-size-10: 72px;
+  --font-size-title-hero-sm: var(--font-scale-07);
+  --font-size-title-hero-md: var(--font-scale-08);
+  --font-size-title-hero-lg: var(--font-scale-09);
+  --font-size-title-page-sm: var(--font-scale-05);
+  --font-size-title-page-md: var(--font-scale-06);
+  --font-size-title-page-lg: var(--font-scale-07);
+  --font-size-title-subtitle-sm: var(--font-scale-05);
+  --font-size-title-subtitle-md: var(--font-scale-06);
+  --font-size-title-subtitle-lg: var(--font-scale-07);
+
+  --font-size-heading-sm: var(--font-scale-04);
+  --font-size-heading-md: var(--font-scale-05);
+  --font-size-heading-lg: var(--font-scale-06);
+  --font-size-subheading-sm: var(--font-scale-03);
+  --font-size-subheading-md: var(--font-scale-04);
+  --font-size-subheading-lg: var(--font-scale-05);
+
+  --font-size-body-sm: var(--font-size-scale-02);
+  --font-size-body-md: var(--font-size-scale-03);
+  --font-size-body-lg: var(--font-size-scale-04);
+
+  /* Weights */
+  --font-weight-titles-regular: var(--p-weight-regular);
+  --font-weight-titles-strong: var(--p-weight-bold);
+
+  --font-weight-headings-regular: var(--p-weight-regular);
+  --font-weight-headings-strong: var(--p-weight-semi-bold);
+
+  --font-weight-body-regular: var(--p-weight-regular);
+  --font-weight-body-strong: var(--p-weight-semi-bold);
+  --font-weight-body-emphasis: var(--p-weight-regular);
+
+  /* Styles */
+  --font-style-body-normal: var(--p-style-normal);
+  --font-style-body-emphasis: var(--p-style-italic);
 }
 
 /* -----------------------------
  * Typography mixins
  * ----------------------------- */
 
+/* Titles */
+@mixin title-hero {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-08);
+  font-weight: var(--font-weight-bold);
+}
+
+@mixin title-page {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-06);
+  font-weight: var(--font-weight-regular);
+}
+
+@mixin subtitle {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-06);
+  font-weight: var(--font-weight-regular);
+}
+
 /* Headings */
-@mixin heading-1 {
-  font-family: var(--font-1);
-  font-size: 32px;
-  line-height: 1.2;
-  font-weight: 700;
+@mixin heading {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-05);
+  font-weight: var(--font-weight-semi-bold);
 }
-@mixin heading-2 {
-  font-family: var(--font-1);
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 700;
-}
-@mixin heading-3 {
-  font-family: var(--font-1);
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 700;
+
+@mixin subheading {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-04);
+  font-weight: var(--font-weight-regular);
 }
 
 /* Paragraphs */
