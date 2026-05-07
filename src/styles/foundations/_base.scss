@@ -1,16 +1,16 @@
 /* Layout-level variables */
 :root {
   --app-max-width: 1100px;
-  --app-gutter: var(--size-xl);
+  --app-gutter: var(--gap-m);
   --header-height: 72px;
   --footer-height: 64px;
 }
 
 /* Body defaults */
 body {
-  font-family: var(--font-1);
-  background-color: var(--color-surface-2);
-  color: var(--color-on-surface-1);
+  font-family: var(--p-family-sans);
+  background-color: var(--color-background-base);
+  color: var(--color-text-base);
 }
 
 /* Root layout helpers */
