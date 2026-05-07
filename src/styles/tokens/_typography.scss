@@ -86,68 +86,83 @@
 
 /* Titles */
 @mixin title-hero {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-08);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-title-hero-md);
+  font-weight: var(--font-weight-titles-strong);
 }
 
 @mixin title-page {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-06);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-title-page-md);
+  font-weight: var(--font-weight-titles-strong);
 }
 
 @mixin subtitle {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-06);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-subtitle-page-md);
+  font-weight: var(--font-weight-titles-strong);
 }
 
 /* Headings */
 @mixin heading {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-05);
-  font-weight: var(--font-weight-semi-bold);
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-heading-md);
+  font-weight: var(--font-weight-headings-strong);
 }
 
 @mixin subheading {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-04);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-subheading-md);
+  font-weight: var(--font-weight-headings-regular);
 }
 
-/* Paragraphs */
-@mixin paragraph-1 {
-  font-family: var(--font-1);
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 400;
-}
-@mixin paragraph-2 {
-  font-family: var(--font-1);
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 400;
-}
-@mixin paragraph-3 {
-  font-family: var(--font-1);
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 400;
+/* Body styles */
+@mixin body-base {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-body-regular);
 }
 
-/* Labels */
+@mixin body-strong {
+  @include body-base;
+  font-weight: var(--font-weight-body-strong);
+}
+
+@mixin body-emphasis {
+  @include body-base;
+  font-weight: var(--font-weight-body-emphasis);
+}
+
+@mixin body-small {
+  @include body-base;
+  font-size: var(--font-size-body-sm);
+}
+
+@mixin body-small-strong {
+  @include body-base;
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-body-strong);
+}
+
+/* Input */
+@mixin input {
+  @include body-base;
+}
+
+/* Code */
+@mixin code {
+  @include body-base;
+  font-family: var(--p-family-mono);
+}
+
+/* Labels --> different from Figma: for better DX experience use "label" instead of "single line text" */
 @mixin label-1 {
-  font-family: var(--font-2);
-  font-size: 16px;
-  // Different from Figma: avoid bad alignment since all labels are on single lines
+  @include body-base;
   line-height: 1;
-  font-weight: 600;
+  white-space: nowrap;
 }
 @mixin label-2 {
-  font-family: var(--font-2);
-  font-size: 12px;
-  // Different from Figma: avoid bad alignment since all labels are on single lines
+  @include body-base;
   line-height: 1;
-  font-weight: 600;
+  white-space: nowrap;
 }
