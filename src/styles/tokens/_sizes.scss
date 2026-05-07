@@ -53,4 +53,15 @@
   --gap-negative-s: var(--p-size-negative-300);
   --gap-negative-m: var(--p-size-negative-400);
   --gap-negative-l: var(--p-size-negative-600);
+
+  /* Padding */
+  --padding-xxs: var(--p-size-100);
+  --padding-xs: var(--p-size-200);
+  --padding-s: var(--p-size-300);
+  --padding-m: var(--p-size-400);
+  --padding-l: var(--p-size-600);
+  --padding-xl: var(--p-size-800);
+  --padding-xxl: var(--p-size-1600);
+  --padding-xxxl: var(--p-size-2400);
+  --padding-xxxxl: var(--p-size-4000);
 }
