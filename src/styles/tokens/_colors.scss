@@ -139,6 +139,10 @@
   --color-text-base-secondary: var(--p-color-gray-500);
   --color-text-base-tertiary: var(--p-color-gray-400);
 
+  --color-icon-base: var(--p-color-gray-900);
+  --color-icon-base-secondary: var(--p-color-gray-500);
+  --color-icon-base-tertiary: var(--p-color-gray-400);
+
   /* Neutral */
   --color-background-neutral: var(--p-color-slate-700);
   --color-background-neutral-hover: var(--p-color-slate-800);
@@ -153,6 +157,13 @@
   --color-text-on-neutral-secondary: var(--p-color-slate-900);
   --color-text-neutral-tertiary: var(--p-color-slate-600);
   --color-text-on-neutral-tertiary: var(--p-color-slate-800);
+
+  --color-icon-neutral: var(--p-color-slate-900);
+  --color-icon-on-neutral: var(--p-color-slate-100);
+  --color-icon-neutral-secondary: var(--p-color-slate-700);
+  --color-icon-on-neutral-secondary: var(--p-color-slate-900);
+  --color-icon-neutral-tertiary: var(--p-color-slate-600);
+  --color-icon-on-neutral-tertiary: var(--p-color-slate-800);
 
   /* Brand */
   --color-background-brand: var(--p-color-brand-800);
@@ -169,6 +180,13 @@
   --color-text-brand-tertiary: var(--p-color-brand-500);
   --color-text-on-brand-tertiary: var(--p-color-brand-800);
 
+  --color-icon-brand: var(--p-color-brand-800);
+  --color-icon-on-brand: var(--p-color-brand-100);
+  --color-icon-brand-secondary: var(--p-color-brand-600);
+  --color-icon-on-brand-secondary: var(--p-color-brand-900);
+  --color-icon-brand-tertiary: var(--p-color-brand-500);
+  --color-icon-on-brand-tertiary: var(--p-color-brand-800);
+
   /* Success */
   --color-background-success: var(--p-color-green-500);
   --color-background-success-hover: var(--p-color-green-600);
@@ -183,6 +201,13 @@
   --color-text-on-success-secondary: var(--p-color-green-800);
   --color-text-success-tertiary: var(--p-color-green-500);
   --color-text-on-success-tertiary: var(--p-color-green-800);
+
+  --color-icon-success: var(--p-color-green-800);
+  --color-icon-on-success: var(--p-color-green-100);
+  --color-icon-success-secondary: var(--p-color-green-600);
+  --color-icon-on-success-secondary: var(--p-color-green-800);
+  --color-icon-success-tertiary: var(--p-color-green-500);
+  --color-icon-on-success-tertiary: var(--p-color-green-900);
 
   /* Warning */
   --color-background-warning: var(--p-color-yellow-400);
@@ -199,6 +224,13 @@
   --color-text-warning-tertiary: var(--p-color-yellow-600);
   --color-text-on-warning-tertiary: var(--p-color-yellow-900);
 
+  --color-icon-warning: var(--p-color-yellow-900);
+  --color-icon-on-warning: var(--p-color-yellow-1000);
+  --color-icon-warning-secondary: var(--p-color-yellow-700);
+  --color-icon-on-warning-secondary: var(--p-color-yellow-800);
+  --color-icon-warning-tertiary: var(--p-color-yellow-600);
+  --color-icon-on-warning-tertiary: var(--p-color-yellow-900);
+
   /* Danger */
   --color-background-danger: var(--p-color-red-500);
   --color-background-danger-hover: var(--p-color-red-600);
@@ -214,11 +246,21 @@
   --color-text-danger-tertiary: var(--p-color-red-500);
   --color-text-on-danger-tertiary: var(--p-color-red-700);
 
+  --color-icon-danger: var(--p-color-red-700);
+  --color-icon-on-danger: var(--p-color-red-100);
+  --color-icon-danger-secondary: var(--p-color-red-600);
+  --color-icon-on-danger-secondary: var(--p-color-red-700);
+  --color-icon-danger-tertiary: var(--p-color-red-500);
+  --color-icon-on-danger-tertiary: var(--p-color-red-700);
+
   /* Disabled */
   --color-background-disabled: var(--p-color-gray-300);
 
   --color-text-disabled: var(--p-color-gray-400);
   --color-text-on-disabled: var(--p-color-gray-400);
+
+  --color-icon-disabled: var(--p-color-gray-400);
+  --color-icon-on-disabled: var(--p-color-gray-400);
 
   /* Utilities */
   --color-background-scrim: rgba(255, 255, 255, 0.8);
@@ -226,6 +268,6 @@
   --color-background-overlay: rgba(0, 0, 0, 0.5);
   --color-background-measurement: var(--p-color-pink-200);
 
-  --color-text-on-overlay: var(--p-color-black-1000);
-  --color-text-on-measurement: var(--p-color-pink-800);
+  --color-icon: var(--p-color-pink-600);
+  --color-icon-on-measurement: var(--p-color-pink-800);
 }
