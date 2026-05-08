@@ -1,0 +1,67 @@
+:root {
+  /* ========================================
+   * Primitive sizes
+   * ====================================== */
+
+  /* Positive */
+  --p-size-0: 0px;
+  --p-size-025: 1px;
+  --p-size-050: 2px;
+  --p-size-100: 4px;
+  --p-size-150: 6px;
+  --p-size-200: 8px;
+  --p-size-300: 12px;
+  --p-size-400: 16px;
+  --p-size-600: 24px;
+  --p-size-800: 32px;
+  --p-size-1200: 48px;
+  --p-size-1600: 64px;
+  --p-size-2400: 96px;
+  --p-size-4000: 160px;
+  --p-size-full: 9999px;
+
+  /* Negative */
+  --p-size-negative-025: -1px;
+  --p-size-negative-100: -4px;
+  --p-size-negative-200: -8px;
+  --p-size-negative-300: -12px;
+  --p-size-negative-400: -16px;
+  --p-size-negative-600: -24px;
+  --p-size-negative-800: -32px;
+  --p-size-negative-1200: -48px;
+
+  /* ========================================
+   * Semantic sizes
+   * ====================================== */
+
+  /* Radius */
+  --radius-s: var(--p-size-100);
+  --radius-m: var(--p-size-200);
+  --radius-l: var(--p-size-400);
+  --radius-full: var(--p-size-full);
+
+  /* Gap */
+  --gap-xxs: var(--p-size-100);
+  --gap-xs: var(--p-size-200);
+  --gap-s: var(--p-size-300);
+  --gap-m: var(--p-size-400);
+  --gap-l: var(--p-size-600);
+  --gap-xl: var(--p-size-1600);
+
+  --gap-negative-xxs: var(--p-size-negative-100);
+  --gap-negative-xs: var(--p-size-negative-200);
+  --gap-negative-s: var(--p-size-negative-300);
+  --gap-negative-m: var(--p-size-negative-400);
+  --gap-negative-l: var(--p-size-negative-600);
+
+  /* Padding */
+  --padding-xxs: var(--p-size-100);
+  --padding-xs: var(--p-size-200);
+  --padding-s: var(--p-size-300);
+  --padding-m: var(--p-size-400);
+  --padding-l: var(--p-size-600);
+  --padding-xl: var(--p-size-800);
+  --padding-xxl: var(--p-size-1600);
+  --padding-xxxl: var(--p-size-2400);
+  --padding-xxxxl: var(--p-size-4000);
+}

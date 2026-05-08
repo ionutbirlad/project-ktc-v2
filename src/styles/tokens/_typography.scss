@@ -1,0 +1,171 @@
+:root {
+  /* ========================================
+   * Primitives
+   * ====================================== */
+
+  /* Font family */
+  --p-family-sans:
+    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --p-family-serif: var(--font-noto-serif), Georgia, "Times New Roman", serif;
+  --p-family-mono:
+    var(--font-roboto-mono), "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  /* Scales */
+  --p-scale-01: 12px;
+  --p-scale-02: 14px;
+  --p-scale-03: 16px;
+  --p-scale-04: 20px;
+  --p-scale-05: 24px;
+  --p-scale-06: 32px;
+  --p-scale-07: 40px;
+  --p-scale-08: 48px;
+  --p-scale-09: 64px;
+  --p-scale-10: 72px;
+
+  /* Weights */
+  --p-weight-thin: 100;
+  --p-weight-extra-light: 200;
+  --p-weight-light: 300;
+  --p-weight-regular: 400;
+  --p-weight-medium: 500;
+  --p-weight-semi-bold: 600;
+  --p-weight-bold: 700;
+  --p-weight-extra-bold: 800;
+  --p-weight-black: 900;
+
+  /* Styles */
+  --p-style-normal: normal;
+  --p-style-italic: italic;
+
+  /* ========================================
+   * Semantics
+   * ====================================== */
+
+  /* Sizes */
+  --font-size-title-hero-sm: var(--p-scale-07);
+  --font-size-title-hero-md: var(--p-scale-08);
+  --font-size-title-hero-lg: var(--p-scale-09);
+  --font-size-title-page-sm: var(--p-scale-05);
+  --font-size-title-page-md: var(--p-scale-06);
+  --font-size-title-page-lg: var(--p-scale-07);
+  --font-size-subtitle-sm: var(--p-scale-05);
+  --font-size-subtitle-md: var(--p-scale-06);
+  --font-size-subtitle-lg: var(--p-scale-07);
+
+  --font-size-heading-sm: var(--p-scale-04);
+  --font-size-heading-md: var(--p-scale-05);
+  --font-size-heading-lg: var(--p-scale-06);
+  --font-size-subheading-sm: var(--p-scale-03);
+  --font-size-subheading-md: var(--p-scale-04);
+  --font-size-subheading-lg: var(--p-scale-05);
+
+  --font-size-body-sm: var(--p-scale-02);
+  --font-size-body-md: var(--p-scale-03);
+  --font-size-body-lg: var(--p-scale-04);
+
+  /* Weights */
+  --font-weight-titles-regular: var(--p-weight-regular);
+  --font-weight-titles-strong: var(--p-weight-bold);
+
+  --font-weight-headings-regular: var(--p-weight-regular);
+  --font-weight-headings-strong: var(--p-weight-semi-bold);
+
+  --font-weight-body-regular: var(--p-weight-regular);
+  --font-weight-body-strong: var(--p-weight-semi-bold);
+  --font-weight-body-emphasis: var(--p-weight-regular);
+
+  /* Styles */
+  --font-style-body-normal: var(--p-style-normal);
+  --font-style-body-emphasis: var(--p-style-italic);
+}
+
+/* -----------------------------
+ * Typography mixins
+ * ----------------------------- */
+
+/* Titles */
+@mixin title-hero {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-title-hero-md);
+  font-weight: var(--font-weight-titles-strong);
+}
+
+@mixin title-page {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-title-page-md);
+  font-weight: var(--font-weight-titles-strong);
+}
+
+@mixin subtitle {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-subtitle-md);
+  font-weight: var(--font-weight-titles-strong);
+}
+
+/* Headings */
+@mixin heading {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-heading-md);
+  font-weight: var(--font-weight-headings-strong);
+}
+
+@mixin subheading {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-subheading-md);
+  font-weight: var(--font-weight-headings-regular);
+}
+
+/* Body styles */
+@mixin body-base {
+  font-family: var(--p-family-sans);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-body-regular);
+  font-style: var(--font-style-body-normal);
+}
+
+@mixin body-strong {
+  @include body-base;
+  font-weight: var(--font-weight-body-strong);
+}
+
+@mixin body-emphasis {
+  @include body-base;
+  font-weight: var(--font-weight-body-emphasis);
+  font-style: var(--font-style-body-emphasis);
+}
+
+@mixin body-small {
+  @include body-base;
+  font-size: var(--font-size-body-sm);
+}
+
+@mixin body-small-strong {
+  @include body-base;
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-body-strong);
+}
+
+/* Input */
+@mixin input {
+  @include body-base;
+}
+
+/* Code */
+@mixin code {
+  @include body-base;
+  font-family: var(--p-family-mono);
+}
+
+/* Labels --> different from Figma: for better DX experience use "label" instead of "single line text" */
+@mixin label-1 {
+  @include body-base;
+  line-height: 1;
+  white-space: nowrap;
+}
+@mixin label-2 {
+  @include body-base;
+  font-size: calc(var(--font-size-body-md) * 0.8);
+  line-height: 1;
+  white-space: nowrap;
+}
