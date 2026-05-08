@@ -105,10 +105,16 @@ The PR description must follow this structure:
 
 ### 4. Issue linking
 
-- At the end of every PR description, add:
+- At the end of every PR description, always add:
   `Closes #<milestone-issue-number>`
-- Use the issue number associated with the current milestone
-- Since each chat corresponds to one milestone, infer the correct issue automatically from the current milestone context
+
+Example:
+
+`Closes #4`
+
+- Use the GitHub issue associated with the current milestone
+- Infer the correct issue automatically from roadmap.md and current milestone context
+- The closing reference must always be included in the final PR description
 
 ### 5. Style
 
