@@ -5,7 +5,7 @@ export default function AppFooter() {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footer__inner}>
-          <span className={styles.footer__text}>APP FOOTER HERE</span>
+          <span className={styles["footer__inner-text"]}>APP FOOTER HERE</span>
         </div>
       </div>
     </footer>
