@@ -13,13 +13,6 @@ body {
   color: var(--color-text-base);
 }
 
-/* Root layout helpers */
-#root {
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Main container helper (optional utility) */
 .container {
   width: min(100% - (var(--app-gutter) * 2), var(--app-max-width));
