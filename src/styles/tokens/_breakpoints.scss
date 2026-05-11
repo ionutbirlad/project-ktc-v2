@@ -1,7 +1,37 @@
+/* =========================================================
+   BREAKPOINT TOKENS
+========================================================= */
+
+/*
+  Breakpoints are intentionally defined using SCSS variables
+  instead of CSS custom properties.
+
+  CSS variables are runtime values and are not reliably usable
+  inside media queries across all environments and workflows.
+
+  Since media queries are resolved at compile time, SCSS variables
+  provide a cleaner and more predictable solution for responsive
+  layouts and breakpoint mixins.
+
+  This project follows a hybrid approach:
+  - CSS variables → runtime design tokens
+    (colors, spacing, typography, radius, effects, etc.)
+  - SCSS variables/mixins → compile-time layout logic
+    (breakpoints and responsive utilities)
+*/
+
+/* =========================================================
+   BREAKPOINT VALUES
+========================================================= */
+
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+$breakpoint-xl: 1200px;
+
+/* =========================================================
+   MOBILE FIRST MIXINS
+========================================================= */
 
 @mixin from-sm {
   @media (min-width: $breakpoint-sm) {
