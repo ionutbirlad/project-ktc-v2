@@ -37,12 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className={`${inter.variable} ${notoSerif.variable} ${robotoMono.variable}`}>
-      <body className={styles.layout}>
-        <AppHeader />
+      <body>
+        <div className={styles.layout}>
+          <AppHeader />
 
-        <main className={styles.layout__main}>{children}</main>
+          <main className={styles.layout__main}>{children}</main>
 
-        <AppFooter />
+          <AppFooter />
+        </div>
       </body>
     </html>
   );
