@@ -1,5 +1,10 @@
+@use "@/styles/tokens/typography" as t;
+
 .button {
+  @include t.label-1;
+
   background-color: var(--color-background-brand);
+  color: var(--color-text-on-brand);
 
   /* Intent */
   &--default {

@@ -31,7 +31,7 @@ const meta: ButtonMeta = {
 
 export const normal: Story = {
   args: {
-    children: "TEXT",
+    children: "Button",
     intent: "default",
     variant: "primary",
   },
@@ -39,7 +39,7 @@ export const normal: Story = {
 
 export const danger: Story = {
   args: {
-    children: "TEXT",
+    children: "Button",
     intent: "danger",
     variant: "primary",
   },
