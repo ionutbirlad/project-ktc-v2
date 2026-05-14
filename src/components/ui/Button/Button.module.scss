@@ -5,6 +5,14 @@
 
   border-radius: var(--radius-m);
 
+  @mixin disabled-state {
+    background-color: var(--color-background-disabled);
+    border: 1px solid var(--color-border-disabled);
+    color: var(--color-text-on-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
   /* Default */
   &--default-primary {
     background-color: var(--color-background-brand);
@@ -16,9 +24,7 @@
     }
 
     &:disabled {
-      background-color: var(--color-background-disabled);
-      border: 1px solid var(--color-border-disabled);
-      color: var(--color-text-on-disabled);
+      @include disabled-state;
     }
   }
 
@@ -32,9 +38,7 @@
     }
 
     &:disabled {
-      background-color: var(--color-background-neutral-tertiary-hover);
-      border: 1px solid var(--color-border-disabled);
-      color: var(--color-text-on-disabled);
+      @include disabled-state;
     }
   }
 
@@ -48,9 +52,7 @@
     }
 
     &:disabled {
-      background-color: var(--color-background-neutral-tertiary-hover);
-      border: 1px solid var(--color-border-disabled);
-      color: var(--color-text-on-disabled);
+      @include disabled-state;
     }
   }
 
@@ -65,9 +67,7 @@
     }
 
     &:disabled {
-      background-color: var(--color-background-disabled);
-      border: 1px solid var(--color-border-disabled);
-      color: var(--color-text-on-disabled);
+      @include disabled-state;
     }
   }
 
@@ -82,9 +82,7 @@
     }
 
     &:disabled {
-      background-color: var(--color-background-neutral-tertiary-hover);
-      border: 1px solid var(--color-border-disabled);
-      color: var(--color-text-on-disabled);
+      @include disabled-state;
     }
   }
 
