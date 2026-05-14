@@ -34,7 +34,7 @@ export default function Button({
       disabled={disabled}
       {...props}
     >
-      <span className={styles.button__inner}>{children}</span>
+      <span>{children}</span>
     </button>
   );
 }
