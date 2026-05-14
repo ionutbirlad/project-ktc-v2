@@ -1,0 +1,30 @@
+.button {
+  background-color: var(--color-background-brand);
+
+  /* Intent */
+  &--default {
+  }
+
+  &--danger {
+  }
+
+  /* Variant */
+  &--primary {
+  }
+
+  &--neutral {
+  }
+
+  &--subtle {
+  }
+
+  /* Size */
+  &--medium {
+  }
+
+  &--small {
+  }
+
+  &__inner {
+  }
+}
