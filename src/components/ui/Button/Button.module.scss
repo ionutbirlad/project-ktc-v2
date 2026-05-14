@@ -3,6 +3,14 @@
 .button {
   @include t.label-1;
 
+  /* DS Defaults */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+
   border-radius: var(--radius-m);
 
   @mixin disabled-state {
