@@ -34,7 +34,7 @@
     color: var(--color-text-base);
 
     &:hover {
-      background-color: var(--color-background-brand-hover);
+      background-color: var(--color-background-neutral-tertiary-hover);
     }
 
     &:disabled {
@@ -44,7 +44,7 @@
 
   &--default-subtle {
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--color-text-neutral);
 
     &:hover {
@@ -73,7 +73,7 @@
 
   &--danger-subtle {
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--color-text-danger);
 
     &:hover {
