@@ -1,19 +1,23 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 
 import styles from "./Button.module.scss";
 
-type ButtonIntent = "default" | "danger";
-type ButtonVariant = "primary" | "neutral" | "subtle";
 type ButtonSize = "medium" | "small";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  children: ReactNode;
-  intent?: ButtonIntent;
-  variant?: ButtonVariant;
+type DefaultButtonProps = {
+  intent?: "default";
+  variant?: "primary" | "neutral" | "subtle";
   size?: ButtonSize;
-  disabled?: boolean;
-  className?: string;
 };
+
+type DangerButtonProps = {
+  intent: "danger";
+  variant?: "primary" | "subtle";
+  size?: ButtonSize;
+};
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
+  (DefaultButtonProps | DangerButtonProps);
 
 export default function Button({
   children,
@@ -26,11 +30,11 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`${styles.button} ${styles[`button--${intent}`]} ${styles[`button--${variant}`]} ${styles[`button--${size}`]} ${className ?? ""}`}
+      className={`${styles.button} ${styles[`button--${intent}-${variant}`]} ${styles[`button--${size}`]} ${className ?? ""}`}
       disabled={disabled}
       {...props}
     >
-      <span className="button__inner">{children}</span>
+      <span className={styles.button__inner}>{children}</span>
     </button>
   );
 }

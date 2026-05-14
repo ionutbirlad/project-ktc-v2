@@ -3,31 +3,98 @@
 .button {
   @include t.label-1;
 
-  background-color: var(--color-background-brand);
-  color: var(--color-text-on-brand);
+  border-radius: var(--radius-m);
 
-  /* Intent */
-  &--default {
+  /* Default */
+  &--default-primary {
+    background-color: var(--color-background-brand);
+    border: 1px solid var(--color-border-brand);
+    color: var(--color-text-on-brand);
+
+    &:hover {
+      background-color: var(--color-background-brand-hover);
+    }
+
+    &:disabled {
+      background-color: var(--color-background-disabled);
+      border: 1px solid var(--color-border-disabled);
+      color: var(--color-text-on-disabled);
+    }
   }
 
-  &--danger {
+  &--default-neutral {
+    background-color: var(--color-background-neutral-tertiary);
+    border: 1px solid var(--color-border-neutral-secondary);
+    color: var(--color-text-base);
+
+    &:hover {
+      background-color: var(--color-background-brand-hover);
+    }
+
+    &:disabled {
+      background-color: var(--color-background-neutral-tertiary-hover);
+      border: 1px solid var(--color-border-disabled);
+      color: var(--color-text-on-disabled);
+    }
   }
 
-  /* Variant */
-  &--primary {
+  &--default-subtle {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-neutral);
+
+    &:hover {
+      border: 1px solid var(--color-border-base);
+    }
+
+    &:disabled {
+      background-color: var(--color-background-neutral-tertiary-hover);
+      border: 1px solid var(--color-border-disabled);
+      color: var(--color-text-on-disabled);
+    }
   }
 
-  &--neutral {
+  /* Danger */
+  &--danger-primary {
+    background-color: var(--color-background-danger);
+    border: 1px solid var(--color-border-danger);
+    color: var(--color-text-on-danger);
+
+    &:hover {
+      background-color: var(--color-background-danger-hover);
+    }
+
+    &:disabled {
+      background-color: var(--color-background-disabled);
+      border: 1px solid var(--color-border-disabled);
+      color: var(--color-text-on-disabled);
+    }
   }
 
-  &--subtle {
+  &--danger-subtle {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-danger);
+
+    &:hover {
+      background-color: var(--color-background-danger-tertiary-hover);
+      border: 1px solid var(--color-border-danger);
+    }
+
+    &:disabled {
+      background-color: var(--color-background-neutral-tertiary-hover);
+      border: 1px solid var(--color-border-disabled);
+      color: var(--color-text-on-disabled);
+    }
   }
 
   /* Size */
   &--medium {
+    padding: var(--padding-s);
   }
 
   &--small {
+    padding: var(--padding-xs);
   }
 
   &__inner {
