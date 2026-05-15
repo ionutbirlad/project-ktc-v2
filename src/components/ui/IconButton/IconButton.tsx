@@ -25,7 +25,7 @@ export default function IconButton({
       className={`${styles["icon-button"]} ${styles[`icon-button--${variant}`]} ${styles[`icon-button--${size}`]} ${className ?? ""}`}
       {...props}
     >
-      <span>{children}</span>
+      {children}
     </button>
   );
 }

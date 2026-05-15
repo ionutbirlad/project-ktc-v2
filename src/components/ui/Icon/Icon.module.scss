@@ -1,8 +1,10 @@
 .icon-wrapper {
+  width: fit-content;
+  height: fit-content;
+
   &__icon {
     color: currentColor;
-    display: inline-block;
-    flex-shrink: 0;
+    display: block;
 
     &--xs {
       width: var(--icon-size-xs);
