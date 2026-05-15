@@ -16,6 +16,7 @@ export default function IconButton({
   size = "medium",
   disabled,
   className,
+  onClick,
   ...props
 }: IconButtonProps) {
   return (
@@ -23,6 +24,7 @@ export default function IconButton({
       type="button"
       disabled={disabled}
       className={`${styles["icon-button"]} ${styles[`icon-button--${variant}`]} ${styles[`icon-button--${size}`]} ${className ?? ""}`}
+      onClick={onClick}
       {...props}
     >
       {children}

@@ -26,6 +26,7 @@ export default function Button({
   size = "medium",
   disabled = false,
   className,
+  onClick,
   ...props
 }: ButtonProps) {
   return (
@@ -33,6 +34,7 @@ export default function Button({
       type="button"
       className={`${styles.button} ${styles[`button--${intent}-${variant}`]} ${styles[`button--${size}`]} ${className ?? ""}`}
       disabled={disabled}
+      onClick={onClick}
       {...props}
     >
       <span>{children}</span>
