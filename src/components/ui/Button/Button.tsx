@@ -1,0 +1,43 @@
+import { ButtonHTMLAttributes } from "react";
+
+import styles from "./Button.module.scss";
+
+export type ButtonSize = "medium" | "small";
+
+type DefaultButtonProps = {
+  intent?: "default";
+  variant?: "primary" | "neutral" | "subtle";
+  size?: ButtonSize;
+};
+
+type DangerButtonProps = {
+  intent: "danger";
+  variant?: "primary" | "subtle";
+  size?: ButtonSize;
+};
+
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
+  (DefaultButtonProps | DangerButtonProps);
+
+export default function Button({
+  children,
+  intent = "default",
+  variant = "primary",
+  size = "medium",
+  disabled = false,
+  className,
+  onClick,
+  ...props
+}: ButtonProps) {
+  return (
+    <button
+      type="button"
+      className={`${styles.button} ${styles[`button--${intent}-${variant}`]} ${styles[`button--${size}`]} ${className ?? ""}`}
+      disabled={disabled}
+      onClick={onClick}
+      {...props}
+    >
+      <span>{children}</span>
+    </button>
+  );
+}

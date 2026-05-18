@@ -1,0 +1,27 @@
+.button-group {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-m);
+
+  &--align-justify {
+    justify-content: space-between;
+  }
+
+  &--align-start {
+    justify-content: flex-start;
+  }
+
+  &--align-end {
+    justify-content: flex-end;
+  }
+
+  &--align-center {
+    justify-content: center;
+  }
+
+  &--align-stack {
+    flex-direction: column;
+  }
+}

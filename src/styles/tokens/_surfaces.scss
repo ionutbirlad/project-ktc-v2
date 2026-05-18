@@ -1,0 +1,24 @@
+/* Dark translucent overlay above page content */
+@mixin surface-overlay {
+  background: var(--color-background-overlay);
+  backdrop-filter: blur(var(--blur-overlay));
+}
+
+/* Stronger modal/drawer backdrop */
+@mixin surface-blanket {
+  background: var(--color-background-blanket);
+  backdrop-filter: blur(var(--blur-blanket));
+}
+
+/* Blurred decorative/content layer */
+@mixin surface-layer {
+  filter: blur(var(--blur-layer));
+}
+
+/* Glassmorphism surface */
+@mixin surface-glass {
+  background: var(--color-background-scrim);
+  border: 1px solid var(--p-color-white-400);
+  box-shadow: var(--shadow-drop-300);
+  backdrop-filter: blur(var(--blur-glass));
+}

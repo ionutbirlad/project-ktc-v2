@@ -1,0 +1,110 @@
+@use "@/styles/tokens/typography" as t;
+
+.button {
+  @include t.label-1;
+
+  /* DS Defaults */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+
+  border-radius: var(--radius-m);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-brand);
+    outline-offset: 2px;
+  }
+
+  @mixin disabled-state {
+    background-color: var(--color-background-disabled);
+    border: 1px solid var(--color-border-disabled);
+    color: var(--color-text-on-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* Default */
+  &--default-primary {
+    background-color: var(--color-background-brand);
+    border: 1px solid var(--color-border-brand);
+    color: var(--color-text-on-brand);
+
+    &:hover {
+      background-color: var(--color-background-brand-hover);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  &--default-neutral {
+    background-color: var(--color-background-neutral-tertiary);
+    border: 1px solid var(--color-border-neutral-secondary);
+    color: var(--color-text-base);
+
+    &:hover {
+      background-color: var(--color-background-neutral-tertiary-hover);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  &--default-subtle {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--color-text-neutral);
+
+    &:hover {
+      border: 1px solid var(--color-border-base);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  /* Danger */
+  &--danger-primary {
+    background-color: var(--color-background-danger);
+    border: 1px solid var(--color-border-danger);
+    color: var(--color-text-on-danger);
+
+    &:hover {
+      background-color: var(--color-background-danger-hover);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  &--danger-subtle {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--color-text-danger);
+
+    &:hover {
+      background-color: var(--color-background-danger-tertiary-hover);
+      border: 1px solid var(--color-border-danger);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  /* Size */
+  &--medium {
+    padding: var(--padding-s);
+  }
+
+  &--small {
+    padding: var(--padding-xs);
+  }
+}

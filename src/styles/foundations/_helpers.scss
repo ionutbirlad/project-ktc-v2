@@ -1,0 +1,7 @@
+.container {
+  --container-default: var(--app-max-width);
+  --container-padding-inline: var(--padding-m);
+
+  width: min(100% - (var(--container-padding-inline) * 2), var(--container-default));
+  margin-inline: auto;
+}

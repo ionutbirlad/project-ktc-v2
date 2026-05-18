@@ -1,0 +1,23 @@
+@use "@/styles/tokens/breakpoints" as *;
+
+.footer {
+  width: 100%;
+  height: var(--app-footer-mobile-height);
+  padding-block: var(--padding-s);
+  background-color: var(--color-background-neutral);
+
+  @include from-lg {
+    height: var(--app-footer-desktop-height);
+    padding-block: var(--padding-xl);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+      color: var(--color-text-on-neutral);
+    }
+  }
+}

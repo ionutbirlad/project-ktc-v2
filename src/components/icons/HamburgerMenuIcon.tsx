@@ -1,0 +1,14 @@
+export default function HamburgerMenuIcon() {
+  return (
+    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M42 20H6M42 12H6M42 28H6M42 36H6"
+        fill="currentColor"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
