@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { type ButtonHTMLAttributes } from "react";
 
 export type IconButtonVariant = "primary" | "neutral" | "subtle";
 export type IconButtonSize = "medium" | "small";
