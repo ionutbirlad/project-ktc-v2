@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Serif, Roboto_Mono } from "next/font/google";
 
-import AppFooter from "@/components/AppFooter/AppFooter";
-import AppHeader from "@/components/AppHeader/AppHeader";
+import { AppFooter } from "@/components/AppFooter";
+import { AppHeader } from "@/components/AppHeader";
 
 import "@/styles/index.scss";
 import styles from "./layout.module.scss";
