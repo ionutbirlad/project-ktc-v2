@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import type { ButtonProps, ButtonSize } from "./Button.types";
 
 import Button from "./Button";
@@ -113,7 +113,7 @@ function renderSizeLabel(size: ButtonSize, rowIndex: number) {
 function renderDangerButton(
   size: ButtonSize,
   variant: Exclude<ButtonVariant, "neutral">,
-  disabled = false
+  disabled = false,
 ) {
   return (
     <Button
@@ -190,7 +190,7 @@ export const AllVariants: Story = {
                   {renderDefaultButton(size, variant, true)}
                 </div>
               </div>
-            ))
+            )),
           )}
         </div>
 
@@ -211,7 +211,7 @@ export const AllVariants: Story = {
                   {renderDangerButton(size, variant, true)}
                 </div>
               </div>
-            ))
+            )),
           )}
         </div>
 
