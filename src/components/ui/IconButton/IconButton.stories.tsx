@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { IconButtonSize, IconButtonVariant } from "./IconButton";
 
-import Icon from "../Icon/Icon";
+import { Icon } from "@/components/ui/Icon";
 
 import IconButton from "./IconButton";
 
