@@ -8,9 +8,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
 
+  /* Handle text ellipsis */
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+
+  transition: background-color 0.2s ease;
   border-radius: var(--radius-m);
 
   &:focus-visible {
@@ -106,5 +110,13 @@
 
   &--small {
     padding: var(--padding-xs);
+  }
+
+  &__inner {
+    /* Handle text ellipsis */
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

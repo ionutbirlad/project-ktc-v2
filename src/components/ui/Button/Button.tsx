@@ -37,7 +37,7 @@ export default function Button({
       onClick={onClick}
       {...props}
     >
-      <span>{children}</span>
+      <span className={`${styles["button__inner"]}`}>{children}</span>
     </button>
   );
 }
