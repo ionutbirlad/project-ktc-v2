@@ -114,7 +114,9 @@
 
   &__inner {
     /* Handle text ellipsis */
+    width: 100%;
     min-width: 0;
+    display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
