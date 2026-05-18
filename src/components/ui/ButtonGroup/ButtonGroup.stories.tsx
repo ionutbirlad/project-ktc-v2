@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { type ButtonGroupAlignment } from "./ButtonGroup";
+import { type ButtonGroupAlignment } from "./ButtonGroup.types";
 
 import { Button } from "@/components/ui/Button";
 import ButtonGroup from "./ButtonGroup";

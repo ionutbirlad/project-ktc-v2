@@ -1,11 +1,6 @@
-import type { HTMLAttributes } from "react";
+import type { ButtonGroupProps } from "./ButtonGroup.types";
 
 import styles from "./ButtonGroup.module.scss";
-
-export type ButtonGroupAlignment = "justify" | "start" | "end" | "center" | "stack";
-export type ButtonGroupProps = HTMLAttributes<HTMLDivElement> & {
-  alignment?: ButtonGroupAlignment;
-};
 
 export default function ButtonGroup({
   alignment = "start",
