@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
+import { type ButtonGroupAlignment } from "./ButtonGroup";
 
 import Button from "../Button/Button";
 import ButtonGroup from "./ButtonGroup";
 
 type ButtonGroupMeta = Meta<typeof ButtonGroup>;
 type Story = StoryObj<typeof ButtonGroup>;
-type ButtonGroupAlignment = "justify" | "start" | "end" | "center" | "stack";
 
 const alignments: ButtonGroupAlignment[] = ["justify", "start", "end", "center", "stack"];
 

@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
+import type { ButtonProps, ButtonSize } from "./Button";
 
 import Button from "./Button";
 
 type ButtonMeta = Meta<typeof Button>;
 type Story = StoryObj<typeof Button>;
-type ButtonSize = "medium" | "small";
-type ButtonVariant = "primary" | "neutral" | "subtle";
+type ButtonVariant = NonNullable<ButtonProps["variant"]>;
 
 const defaultVariants: ButtonVariant[] = ["primary", "neutral", "subtle"];
 const dangerVariants: Exclude<ButtonVariant, "neutral">[] = ["primary", "subtle"];

@@ -2,9 +2,9 @@ import type { HTMLAttributes } from "react";
 
 import styles from "./ButtonGroup.module.scss";
 
-type ButtonGroupAlignments = "justify" | "start" | "end" | "center" | "stack";
+export type ButtonGroupAlignment = "justify" | "start" | "end" | "center" | "stack";
 type ButtonGroupProps = HTMLAttributes<HTMLDivElement> & {
-  alignment?: ButtonGroupAlignments;
+  alignment?: ButtonGroupAlignment;
 };
 
 export default function ButtonGroup({

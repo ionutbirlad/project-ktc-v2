@@ -2,8 +2,8 @@ import { ButtonHTMLAttributes } from "react";
 
 import styles from "./IconButton.module.scss";
 
-type IconButtonVariant = "primary" | "neutral" | "subtle";
-type IconButtonSize = "medium" | "small";
+export type IconButtonVariant = "primary" | "neutral" | "subtle";
+export type IconButtonSize = "medium" | "small";
 
 type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: IconButtonVariant;
