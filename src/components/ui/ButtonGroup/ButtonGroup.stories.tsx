@@ -42,16 +42,12 @@ const frameStyle = {
   borderRadius: "var(--radius-m)",
 } as const;
 
-const stackButtonStyle = {
-  width: "100%",
-} as const;
-
 function renderButtons(alignment: ButtonGroupAlignment) {
   if (alignment === "stack") {
     return (
       <>
         <Button variant="subtle">Button</Button>
-        <Button style={stackButtonStyle}>Button</Button>
+        <Button>Button</Button>
       </>
     );
   }

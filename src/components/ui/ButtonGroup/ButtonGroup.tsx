@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "react";
 import styles from "./ButtonGroup.module.scss";
 
 export type ButtonGroupAlignment = "justify" | "start" | "end" | "center" | "stack";
-type ButtonGroupProps = HTMLAttributes<HTMLDivElement> & {
+export type ButtonGroupProps = HTMLAttributes<HTMLDivElement> & {
   alignment?: ButtonGroupAlignment;
 };
 
@@ -16,6 +16,7 @@ export default function ButtonGroup({
   return (
     <div
       className={`${styles["button-group"]} ${styles[`button-group--align-${alignment}`]} ${className ?? ""}`}
+      role="group"
       {...props}
     >
       {children}
