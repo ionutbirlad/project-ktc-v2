@@ -12,33 +12,33 @@ const dangerVariants: Exclude<ButtonVariant, "neutral">[] = ["primary", "subtle"
 const sizes: ButtonSize[] = ["medium", "small"];
 
 const playgroundStyle = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: "var(--gap-xxl)",
+  alignItems: "flex-start",
+} as const;
+
+const playgroundGroupStyle = {
   display: "grid",
   gap: "var(--gap-m)",
-  width: "min(100%, 560px)",
+  width: "min(100%, 520px)",
 } as const;
 
-const sizeGroupStyle = {
-  display: "grid",
-  gridTemplateColumns: "88px minmax(0, 1fr)",
-  alignItems: "center",
-  gap: "var(--gap-l)",
+const dangerPlaygroundGroupStyle = {
+  ...playgroundGroupStyle,
+  width: "min(100%, 440px)",
 } as const;
 
-const variantGridStyle = {
+const matrixStyle = {
   display: "grid",
-  gap: "var(--gap-m)",
-} as const;
-
-const variantRowStyle = {
-  display: "grid",
-  gridTemplateColumns: "96px minmax(0, 1fr)",
+  gridTemplateColumns: "88px 96px minmax(264px, 1fr)",
   alignItems: "center",
   gap: "var(--gap-m)",
 } as const;
 
 const buttonRowStyle = {
   display: "grid",
-  gridTemplateColumns: "repeat(3, minmax(80px, 1fr))",
+  gridTemplateColumns: "repeat(3, minmax(72px, 1fr))",
   alignItems: "center",
   justifyItems: "center",
   gap: "var(--gap-m)",
@@ -56,6 +56,8 @@ const labelStyle = {
 } as const;
 
 const frameStyle = {
+  display: "grid",
+  gap: "var(--gap-m)",
   padding: "var(--padding-m)",
   border: "2px dashed var(--color-border-base-tertiary)",
   borderRadius: "var(--radius-m)",
@@ -63,13 +65,13 @@ const frameStyle = {
 
 const columnLabelsStyle = {
   display: "grid",
-  gridTemplateColumns: "96px minmax(0, 1fr)",
+  gridTemplateColumns: "88px 96px minmax(264px, 1fr)",
   gap: "var(--gap-m)",
 } as const;
 
 const columnLabelsInnerStyle = {
   display: "grid",
-  gridTemplateColumns: "repeat(3, minmax(80px, 1fr))",
+  gridTemplateColumns: "repeat(3, minmax(72px, 1fr))",
   justifyItems: "center",
   gap: "var(--gap-m)",
 } as const;
@@ -78,19 +80,34 @@ const stateButtonStyle = {
   maxWidth: "100%",
 } as const;
 
-const dangerRowStyle = {
-  display: "grid",
-  gridTemplateColumns: "96px minmax(0, 1fr)",
-  alignItems: "center",
-  gap: "var(--gap-m)",
-} as const;
-
 function renderDefaultButton(size: ButtonSize, variant: ButtonVariant, disabled = false) {
   return (
     <Button disabled={disabled} size={size} style={stateButtonStyle} variant={variant}>
       {variant}
     </Button>
   );
+}
+
+function renderColumnLabels() {
+  return (
+    <div style={columnLabelsStyle}>
+      <span />
+      <span />
+      <div style={columnLabelsInnerStyle}>
+        <span style={labelStyle}>Default</span>
+        <span style={labelStyle}>Hover</span>
+        <span style={labelStyle}>Disabled</span>
+      </div>
+    </div>
+  );
+}
+
+function renderSizeLabel(size: ButtonSize, rowIndex: number) {
+  if (rowIndex !== 0) {
+    return <span />;
+  }
+
+  return <span style={labelStyle}>{size}</span>;
 }
 
 function renderDangerButton(
@@ -159,51 +176,46 @@ export const AllVariants: Story = {
   },
   render: () => (
     <div style={playgroundStyle}>
-      <div style={frameStyle}>
-        <div style={variantGridStyle}>
-          {sizes.map((size) => (
-            <div key={size} style={sizeGroupStyle}>
-              <span style={labelStyle}>{size}</span>
+      <div style={playgroundGroupStyle}>
+        <div style={frameStyle}>
+          {sizes.map((size) =>
+            defaultVariants.map((variant, rowIndex) => (
+              <div key={`${size}-default-${variant}`} style={matrixStyle}>
+                {renderSizeLabel(size, rowIndex)}
+                <span style={labelStyle}>{variant}</span>
 
-              <div style={variantGridStyle}>
-                {defaultVariants.map((variant) => (
-                  <div key={`${size}-default-${variant}`} style={variantRowStyle}>
-                    <span style={labelStyle}>{variant}</span>
-
-                    <div style={buttonRowStyle}>
-                      {renderDefaultButton(size, variant)}
-                      {renderDefaultButton(size, variant)}
-                      {renderDefaultButton(size, variant, true)}
-                    </div>
-                  </div>
-                ))}
-
-                <div style={dangerRowStyle}>
-                  <span style={labelStyle}>danger</span>
-
-                  <div style={variantGridStyle}>
-                    {dangerVariants.map((variant) => (
-                      <div key={`${size}-danger-${variant}`} style={buttonRowStyle}>
-                        {renderDangerButton(size, variant)}
-                        {renderDangerButton(size, variant)}
-                        {renderDangerButton(size, variant, true)}
-                      </div>
-                    ))}
-                  </div>
+                <div style={buttonRowStyle}>
+                  {renderDefaultButton(size, variant)}
+                  {renderDefaultButton(size, variant)}
+                  {renderDefaultButton(size, variant, true)}
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
+
+        {renderColumnLabels()}
       </div>
 
-      <div style={columnLabelsStyle}>
-        <span />
-        <div style={columnLabelsInnerStyle}>
-          <span style={labelStyle}>Default</span>
-          <span style={labelStyle}>Hover</span>
-          <span style={labelStyle}>Disabled</span>
+      <div style={dangerPlaygroundGroupStyle}>
+        <div style={frameStyle}>
+          {sizes.map((size) =>
+            dangerVariants.map((variant, rowIndex) => (
+              <div key={`${size}-danger-${variant}`} style={matrixStyle}>
+                {renderSizeLabel(size, rowIndex)}
+                <span style={labelStyle}>{variant}</span>
+
+                <div style={buttonRowStyle}>
+                  {renderDangerButton(size, variant)}
+                  {renderDangerButton(size, variant)}
+                  {renderDangerButton(size, variant, true)}
+                </div>
+              </div>
+            ))
+          )}
         </div>
+
+        {renderColumnLabels()}
       </div>
     </div>
   ),
