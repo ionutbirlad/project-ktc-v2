@@ -1,14 +1,6 @@
-import { ButtonHTMLAttributes } from "react";
+import type { IconButtonProps } from "./IconButton.types";
 
 import styles from "./IconButton.module.scss";
-
-export type IconButtonVariant = "primary" | "neutral" | "subtle";
-export type IconButtonSize = "medium" | "small";
-
-type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: IconButtonVariant;
-  size?: IconButtonSize;
-};
 
 export default function IconButton({
   children,
