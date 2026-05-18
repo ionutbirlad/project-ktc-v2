@@ -1,23 +1,6 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonProps } from "./Button.types";
 
 import styles from "./Button.module.scss";
-
-export type ButtonSize = "medium" | "small";
-
-type DefaultButtonProps = {
-  intent?: "default";
-  variant?: "primary" | "neutral" | "subtle";
-  size?: ButtonSize;
-};
-
-type DangerButtonProps = {
-  intent: "danger";
-  variant?: "primary" | "subtle";
-  size?: ButtonSize;
-};
-
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  (DefaultButtonProps | DangerButtonProps);
 
 export default function Button({
   children,

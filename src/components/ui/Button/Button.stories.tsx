@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import type { ButtonProps, ButtonSize } from "./Button";
+import type { ButtonProps, ButtonSize } from "./Button.types";
 
 import Button from "./Button";
 
