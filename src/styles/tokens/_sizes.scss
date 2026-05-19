@@ -12,8 +12,10 @@
   --p-size-200: 8px;
   --p-size-300: 12px;
   --p-size-400: 16px;
+  --p-size-500: 20px;
   --p-size-600: 24px;
   --p-size-800: 32px;
+  --p-size-1000: 40px;
   --p-size-1200: 48px;
   --p-size-1600: 64px;
   --p-size-2400: 96px;
@@ -64,4 +66,12 @@
   --padding-xxl: var(--p-size-1600);
   --padding-xxxl: var(--p-size-2400);
   --padding-xxxxl: var(--p-size-4000);
+
+  /* Icons */
+  --icon-size-xs: var(--p-size-400);
+  --icon-size-s: var(--p-size-500);
+  --icon-size-m: var(--p-size-600);
+  --icon-size-l: var(--p-size-800);
+  --icon-size-xl: var(--p-size-1000);
+  --icon-size-xxl: var(--p-size-1200);
 }

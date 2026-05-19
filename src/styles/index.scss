@@ -1,6 +1,11 @@
-@import "./tokens/colors";
-@import "./tokens/sizes";
-@import "./tokens/typography";
+@use "./tokens/layout";
+@use "./tokens/colors";
+@use "./tokens/breakpoints";
+@use "./tokens/sizes";
+@use "./tokens/typography";
+@use "./tokens/effects";
+@use "./tokens/surfaces";
 
-@import "./foundations/reset";
-@import "./foundations/base";
+@use "./foundations/reset";
+@use "./foundations/base";
+@use "./foundations/helpers";

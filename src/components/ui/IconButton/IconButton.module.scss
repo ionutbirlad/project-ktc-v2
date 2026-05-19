@@ -1,0 +1,76 @@
+@use "@/styles/tokens/typography" as t;
+
+.icon-button {
+  @include t.label-1;
+
+  /* DS Defaults */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+
+  border-radius: var(--radius-full);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-brand);
+    outline-offset: 2px;
+  }
+
+  @mixin disabled-state {
+    background-color: var(--color-background-disabled);
+    color: var(--color-text-on-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* Default */
+  &--primary {
+    background-color: var(--color-background-brand);
+    color: var(--color-text-on-brand);
+
+    &:hover {
+      background-color: var(--color-background-brand-hover);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  &--neutral {
+    background-color: var(--color-background-neutral-tertiary);
+    color: var(--color-text-base);
+
+    &:hover {
+      background-color: var(--color-background-neutral-tertiary-hover);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  &--subtle {
+    background-color: transparent;
+    color: var(--color-text-neutral);
+
+    &:hover {
+      background-color: var(--color-background-base-hover);
+    }
+
+    &:disabled {
+      @include disabled-state;
+    }
+  }
+
+  /* Size */
+  &--medium {
+    padding: var(--padding-s);
+  }
+
+  &--small {
+    padding: var(--padding-xs);
+  }
+}

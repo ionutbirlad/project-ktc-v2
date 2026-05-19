@@ -1,0 +1,39 @@
+.icon-wrapper {
+  width: fit-content;
+  height: fit-content;
+
+  &__icon {
+    color: currentColor;
+    display: block;
+
+    &--xs {
+      width: var(--icon-size-xs);
+      height: var(--icon-size-xs);
+    }
+
+    &--s {
+      width: var(--icon-size-s);
+      height: var(--icon-size-s);
+    }
+
+    &--m {
+      width: var(--icon-size-m);
+      height: var(--icon-size-m);
+    }
+
+    &--l {
+      width: var(--icon-size-l);
+      height: var(--icon-size-l);
+    }
+
+    &--xl {
+      width: var(--icon-size-xl);
+      height: var(--icon-size-xl);
+    }
+
+    &--xxl {
+      width: var(--icon-size-xxl);
+      height: var(--icon-size-xxl);
+    }
+  }
+}
