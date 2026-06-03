@@ -29,3 +29,17 @@ const meta: AvatarMeta = {
     },
   },
 };
+
+export const Circle: Story = {
+  args: {
+    variant: "circle",
+  },
+};
+
+export const Square: Story = {
+  args: {
+    variant: "square",
+  },
+};
+
+export default meta;
