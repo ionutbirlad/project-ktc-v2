@@ -50,7 +50,7 @@ export const Square: Story = {
 
 export const Fallback: Story = {
   args: {
-    variant: "circle",
+    variant: "square",
     src: undefined,
     alt: "Avatar mock picture",
     fallback: "I",
