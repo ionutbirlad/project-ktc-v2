@@ -17,7 +17,9 @@ export default function AvatarGroup({
       <div className={`${styles["avatar-group__container"]}`}>
         <div className={`${styles["avatar-group__container-preview"]}`}>{children}</div>
 
-        <div className={`${styles["avatar-group__container-hidden"]}`}>{overflowCount}</div>
+        {overflowCount && (
+          <div className={`${styles["avatar-group__container-hidden"]}`}>{`+${overflowCount}`}</div>
+        )}
       </div>
     </div>
   );

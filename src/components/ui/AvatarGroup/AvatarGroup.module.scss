@@ -2,9 +2,11 @@
   background-color: red;
 
   &--spaced {
+    background-color: red;
   }
 
   &--overlapped {
+    background-color: red;
   }
 
   &__container {
@@ -13,9 +15,11 @@
     justify-content: flex-start;
 
     &-preview {
+      background-color: red;
     }
 
     &-hidden {
+      background-color: red;
     }
   }
 }
