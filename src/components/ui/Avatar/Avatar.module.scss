@@ -1,29 +1,41 @@
 .avatar {
   overflow: hidden;
 
+  background-color: red;
+
   &--circle {
-    border-radius: 100px;
+    border-radius: var(--radius-full);
   }
 
   &--square {
-    border-radius: 5px;
+    border-radius: var(--radius-m);
   }
 
   &--small {
-    border-radius: 100px;
+    width: var(--icon-size-m);
+    height: var(--icon-size-m);
   }
 
   &--medium {
-    border-radius: 5px;
+    width: var(--icon-size-l);
+    height: var(--icon-size-l);
   }
 
   &--large {
-    border-radius: 1px;
+    width: var(--icon-size-xl);
+    height: var(--icon-size-xl);
   }
 
   &__container {
     &-image {
-      display: block;
+      & img {
+        width: fit-content;
+        height: fit-content;
+        display: block;
+        margin: 0;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 }

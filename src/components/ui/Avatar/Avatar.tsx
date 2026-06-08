@@ -4,6 +4,12 @@ import Image from "next/image";
 
 import styles from "./Avatar.module.scss";
 
+const avatarSizes = {
+  small: 24,
+  medium: 32,
+  large: 40,
+} as const;
+
 export default function Avatar({
   src,
   alt,
@@ -21,7 +27,7 @@ export default function Avatar({
       <div className={`${styles["avatar__container"]}`}>
         {src ? (
           <div className={`${styles["avatar__container-image"]}`}>
-            <Image src={src} alt={alt} width={300} height={300} />
+            <Image src={src} alt={alt} width={avatarSizes[size]} height={avatarSizes[size]} />
           </div>
         ) : (
           <div className={`${styles["avatar__container-fallback"]}`}>{fallback}</div>
