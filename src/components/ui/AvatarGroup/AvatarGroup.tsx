@@ -4,7 +4,9 @@ import styles from "./AvatarGroup.module.scss";
 
 export default function AvatarGroup({
   variant = "overlap",
+  overflowCount,
   className,
+  children,
   ...props
 }: AvatarGroupProps) {
   return (
@@ -13,9 +15,9 @@ export default function AvatarGroup({
       {...props}
     >
       <div className={`${styles["avatar-group__container"]}`}>
-        <div className={`${styles["avatar-group__container-preview"]}`}>AVATAR GROUP HERE</div>
+        <div className={`${styles["avatar-group__container-preview"]}`}>{children}</div>
 
-        <div className={`${styles["avatar-group__container-hidden"]}`}>PREVIEW NUMBER HERE</div>
+        <div className={`${styles["avatar-group__container-hidden"]}`}>{overflowCount}</div>
       </div>
     </div>
   );

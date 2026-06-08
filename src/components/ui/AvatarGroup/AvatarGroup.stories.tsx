@@ -14,18 +14,23 @@ const meta: AvatarGroupMeta = {
       control: "select",
       options: ["spaced", "overlap"],
     },
+    overflowCount: {
+      control: "text",
+    },
   },
 };
 
 export const Spaced: Story = {
   args: {
     variant: "spaced",
+    overflowCount: 3,
   },
 };
 
 export const overlapped: Story = {
   args: {
     variant: "overlap",
+    overflowCount: 3,
   },
 };
 
