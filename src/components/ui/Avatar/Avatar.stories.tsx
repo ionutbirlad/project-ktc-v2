@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import Avatar from "./Avatar";
 
+import AvatarMock from "/public/assets/mocks/me.png";
+
 type AvatarMeta = Meta<typeof Avatar>;
 type Story = StoryObj<typeof Avatar>;
 
@@ -33,12 +35,16 @@ const meta: AvatarMeta = {
 export const Circle: Story = {
   args: {
     variant: "circle",
+    src: AvatarMock,
+    alt: "asdasd",
   },
 };
 
 export const Square: Story = {
   args: {
     variant: "square",
+    src: AvatarMock,
+    alt: "asdasd",
   },
 };
 

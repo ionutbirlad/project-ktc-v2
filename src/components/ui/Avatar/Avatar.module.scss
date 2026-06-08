@@ -1,0 +1,29 @@
+.avatar {
+  overflow: hidden;
+
+  &--circle {
+    border-radius: 100px;
+  }
+
+  &--square {
+    border-radius: 5px;
+  }
+
+  &--small {
+    border-radius: 100px;
+  }
+
+  &--medium {
+    border-radius: 5px;
+  }
+
+  &--large {
+    border-radius: 1px;
+  }
+
+  &__container {
+    &-image {
+      display: block;
+    }
+  }
+}
