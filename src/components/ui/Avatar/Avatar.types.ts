@@ -1,8 +1,8 @@
 import { type ImageProps } from "next/image";
 import { type HTMLAttributes } from "react";
 
-type AvatarSize = "small" | "medium" | "large";
-type AvatarVariant = "circle" | "square";
+export type AvatarSize = "small" | "medium" | "large";
+export type AvatarVariant = "circle" | "square";
 type AvatarWithImage = {
   src: ImageProps["src"];
   alt: string;

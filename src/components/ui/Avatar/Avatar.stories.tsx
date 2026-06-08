@@ -52,7 +52,6 @@ export const Fallback: Story = {
   args: {
     variant: "square",
     src: undefined,
-    alt: "Avatar mock picture",
     fallback: "I",
   },
 };
