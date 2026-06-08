@@ -48,4 +48,13 @@ export const Square: Story = {
   },
 };
 
+export const Fallback: Story = {
+  args: {
+    variant: "circle",
+    src: undefined,
+    alt: "asdasd",
+    fallback: "I",
+  },
+};
+
 export default meta;
