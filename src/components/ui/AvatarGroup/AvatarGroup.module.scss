@@ -1,0 +1,21 @@
+.avatar-group {
+  background-color: red;
+
+  &--spaced {
+  }
+
+  &--overlapped {
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-preview {
+    }
+
+    &-hidden {
+    }
+  }
+}
