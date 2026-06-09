@@ -1,13 +1,36 @@
+@use "@/styles/tokens/typography" as t;
+@use "@/styles/utils/text" as u;
+
 .avatar-block {
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+
   &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-s);
+
     &-avatar {
     }
 
     &-text {
+      width: 100%;
+      min-width: 0;
+
       &-title {
+        @include t.body-strong;
+        @include u.ellipsis;
+
+        color: var(--color-text-base-secondary);
+        margin-bottom: var(--gap-xxs);
       }
 
       &-description {
+        @include u.ellipsis;
+
+        color: var(--color-text-base-tertiary);
       }
     }
   }
