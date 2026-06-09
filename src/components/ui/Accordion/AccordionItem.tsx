@@ -1,5 +1,7 @@
 import { AccordionItemProps } from "./Accordion.types";
 
+import { Icon } from "../Icon";
+
 import styles from "./Accordion.module.scss";
 
 export default function AccordionItem({
@@ -14,7 +16,9 @@ export default function AccordionItem({
         <div className={`${styles["accordion-item__container-title"]}`}>
           <div className={`${styles["accordion-item__container-title-text"]}`}>{title}</div>
 
-          <div className={`${styles["accordion-item__container-title-icon"]}`}>icon here</div>
+          <div className={`${styles["accordion-item__container-title-icon"]}`}>
+            <Icon name="chevron" />
+          </div>
         </div>
 
         <div className={`${styles["accordion-item__container-content"]}`}>{description}</div>
