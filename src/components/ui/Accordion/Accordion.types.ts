@@ -1,6 +1,6 @@
 import type { HTMLAttributes, ReactNode } from "react";
 
-export type AccordionItemProps = Omit<HTMLAttributes<HTMLButtonElement>, "title"> & {
+export type AccordionItemProps = Omit<HTMLAttributes<HTMLDivElement>, "title"> & {
   title: string;
   description: string;
   className?: string;

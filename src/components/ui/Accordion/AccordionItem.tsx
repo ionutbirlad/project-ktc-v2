@@ -20,32 +20,27 @@ export default function AccordionItem({
   };
 
   return (
-    <button
-      className={`${styles["accordion-item"]} ${className ?? ""}`}
-      onClick={handleShowMore}
+    <div
+      className={`${styles["accordion-item"]} ${showMore && `${styles["accordion-item--open"]}`} ${className ?? ""}`}
       aria-expanded={showMore}
       aria-controls={contentId}
       {...props}
     >
-      <div
-        className={`${styles["accordion-item__container"]} ${showMore && `${styles["accordion-item__container--open"]}`}`}
-      >
-        <div className={`${styles["accordion-item__container-title"]}`}>
-          <div className={`${styles["accordion-item__container-title-text"]}`}>{title}</div>
+      <button onClick={handleShowMore} className={`${styles["accordion-item__title"]}`}>
+        <div className={`${styles["accordion-item__title-text"]}`}>{title}</div>
 
-          <div
-            className={`${styles["accordion-item__container-title-icon"]} ${showMore && `${styles["accordion-item__container-title-icon--open"]}`}`}
-          >
-            <Icon name="chevron" size="s" />
-          </div>
+        <div
+          className={`${styles["accordion-item__title-icon"]} ${showMore && `${styles["accordion-item__title-icon--open"]}`}`}
+        >
+          <Icon name="chevron" size="s" />
         </div>
+      </button>
 
-        {showMore && (
-          <div className={`${styles["accordion-item__container-content"]}`} id={contentId}>
-            {description}
-          </div>
-        )}
-      </div>
-    </button>
+      {showMore && (
+        <div className={`${styles["accordion-item__content"]}`} id={contentId}>
+          {description}
+        </div>
+      )}
+    </div>
   );
 }
