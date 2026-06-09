@@ -1,4 +1,4 @@
-import { HamburgerMenuIcon, StarIcon, UserIcon } from "@/components/icons";
+import { Chevron, HamburgerMenuIcon, StarIcon, UserIcon } from "@/components/icons";
 
 import styles from "./Icon.module.scss";
 
@@ -6,6 +6,7 @@ export const icons = {
   star: <StarIcon />,
   hamburgerMenu: <HamburgerMenuIcon />,
   user: <UserIcon />,
+  chevron: <Chevron />,
 } as const;
 
 export type IconNames = keyof typeof icons;
