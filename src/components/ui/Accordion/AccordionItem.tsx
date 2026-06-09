@@ -27,7 +27,9 @@ export default function AccordionItem({
       aria-controls={contentId}
       {...props}
     >
-      <div className={`${styles["accordion-item__container"]}`}>
+      <div
+        className={`${styles["accordion-item__container"]} ${showMore && `${styles["accordion-item__container--open"]}`}`}
+      >
         <div className={`${styles["accordion-item__container-title"]}`}>
           <div className={`${styles["accordion-item__container-title-text"]}`}>{title}</div>
 
