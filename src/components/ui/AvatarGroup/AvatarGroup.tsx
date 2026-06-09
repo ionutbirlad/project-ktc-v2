@@ -9,8 +9,10 @@ export default function AvatarGroup({
   children,
   ...props
 }: AvatarGroupProps) {
+  const hasOverflow = typeof overflowCount === "number" && overflowCount > 0;
+
   return (
-    <div className={`${styles["avatar-group"]} ${className ?? ""}`} {...props}>
+    <div className={`${styles["avatar-group"]} ${className ?? ""}`} role="group" {...props}>
       <div className={`${styles["avatar-group__container"]}`}>
         <div
           className={`${styles["avatar-group__container-preview"]} ${styles[`avatar-group__container-preview--${variant}`]}`}
@@ -18,8 +20,10 @@ export default function AvatarGroup({
           {children}
         </div>
 
-        {overflowCount && (
-          <div className={`${styles["avatar-group__container-hidden"]}`}>{`+${overflowCount}`}</div>
+        {hasOverflow && (
+          <div
+            className={`${styles["avatar-group__container-counter"]}`}
+          >{`+${overflowCount}`}</div>
         )}
       </div>
     </div>

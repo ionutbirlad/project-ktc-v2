@@ -28,25 +28,27 @@ const meta: AvatarGroupMeta = {
       options: ["spaced", "overlap"],
     },
     overflowCount: {
-      control: "text",
+      control: "number",
     },
   },
 };
 
 export const Spaced: Story = {
-  render: () => (
-    <AvatarGroup variant="spaced" overflowCount={3}>
-      {renderAvatars()}
-    </AvatarGroup>
-  ),
+  args: {
+    variant: "spaced",
+    overflowCount: 3,
+    "aria-label": "Avatar group example",
+  },
+  render: (args) => <AvatarGroup {...args}>{renderAvatars()}</AvatarGroup>,
 };
 
-export const overlapped: Story = {
-  render: () => (
-    <AvatarGroup variant="overlap" overflowCount={3}>
-      {renderAvatars()}
-    </AvatarGroup>
-  ),
+export const Overlapped: Story = {
+  args: {
+    variant: "overlap",
+    overflowCount: 3,
+    "aria-label": "Avatar group example",
+  },
+  render: (args) => <AvatarGroup {...args}>{renderAvatars()}</AvatarGroup>,
 };
 
 export default meta;

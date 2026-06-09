@@ -2,14 +2,18 @@
 
 .avatar-group {
   width: fit-content;
+  max-width: 100%;
+  min-width: 0;
 
   &__container {
+    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: var(--gap-xxs);
 
     &-preview {
+      min-width: 0;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -27,7 +31,7 @@
       }
     }
 
-    &-hidden {
+    &-counter {
       @include t.body-small;
 
       padding: var(--padding-xxs);
