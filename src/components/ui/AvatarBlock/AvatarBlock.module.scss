@@ -5,6 +5,7 @@
   width: fit-content;
   max-width: 100%;
   min-width: 0;
+  flex-shrink: 0;
 
   &__container {
     display: flex;
