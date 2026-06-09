@@ -1,0 +1,17 @@
+.accordion {
+  max-width: 100%;
+
+  &__container {
+    display: block;
+  }
+}
+
+.accordion-item {
+  &__container {
+    &-title {
+    }
+
+    &-content {
+    }
+  }
+}
