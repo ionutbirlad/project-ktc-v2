@@ -25,6 +25,7 @@
     background-color: var(--color-background-base-secondary);
     border: 1px solid var(--color-border-base);
     border-radius: var(--radius-m);
+    transition: background-color 0.2s ease;
 
     &--open {
       background-color: var(--color-background-base);
@@ -44,6 +45,7 @@
 
       &-icon {
         width: fit-content;
+        transition: transform 0.2s ease-in-out;
 
         &--open {
           transform: rotate(180deg);
