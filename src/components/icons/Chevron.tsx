@@ -1,6 +1,6 @@
 export default function Chevron() {
   return (
-    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path
         d="M10 15L20 25L30 15"
         fill="none"
