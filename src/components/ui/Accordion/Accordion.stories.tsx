@@ -7,7 +7,13 @@ type AccordionMeta = Meta<typeof Accordion>;
 type Story = StoryObj<typeof Accordion>;
 
 function renderItems() {
-  return <AccordionItem title="Title" description="Description" />;
+  return (
+    <>
+      <AccordionItem title="Title" description="Description" />
+      <AccordionItem title="Title" description="Description" />
+      <AccordionItem title="Title" description="Description" />
+    </>
+  );
 }
 
 const meta: AccordionMeta = {
@@ -17,17 +23,7 @@ const meta: AccordionMeta = {
 };
 
 export const Default: Story = {
-  args: {
-    title: "Title",
-    content: "Description",
-  },
-  render: (args) => (
-    <>
-      <AccordionItem {...args}>{renderItems()}</AccordionItem>
-      <AccordionItem {...args}>{renderItems()}</AccordionItem>
-      <AccordionItem {...args}>{renderItems()}</AccordionItem>
-    </>
-  ),
+  render: () => <Accordion>{renderItems()}</Accordion>,
 };
 
 export default meta;
