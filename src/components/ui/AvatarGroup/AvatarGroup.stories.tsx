@@ -1,9 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
+import Avatar from "../Avatar/Avatar";
 import AvatarGroup from "./AvatarGroup";
+
+import AvatarMock from "/public/assets/mocks/me.jpeg";
 
 type AvatarGroupMeta = Meta<typeof AvatarGroup>;
 type Story = StoryObj<typeof AvatarGroup>;
+
+function renderAvatars() {
+  return (
+    <>
+      <Avatar src={AvatarMock} size="large" alt="Avatar mock picture" />
+      <Avatar src={AvatarMock} size="large" alt="Avatar mock picture" />
+      <Avatar src={AvatarMock} size="large" alt="Avatar mock picture" />
+    </>
+  );
+}
 
 const meta: AvatarGroupMeta = {
   title: "UI/AvatarGroup",
@@ -21,17 +34,19 @@ const meta: AvatarGroupMeta = {
 };
 
 export const Spaced: Story = {
-  args: {
-    variant: "spaced",
-    overflowCount: 3,
-  },
+  render: () => (
+    <AvatarGroup variant="spaced" overflowCount={3}>
+      {renderAvatars()}
+    </AvatarGroup>
+  ),
 };
 
 export const overlapped: Story = {
-  args: {
-    variant: "overlap",
-    overflowCount: 3,
-  },
+  render: () => (
+    <AvatarGroup variant="overlap" overflowCount={3}>
+      {renderAvatars()}
+    </AvatarGroup>
+  ),
 };
 
 export default meta;
