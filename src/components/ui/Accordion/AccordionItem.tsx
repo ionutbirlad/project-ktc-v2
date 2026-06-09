@@ -11,7 +11,11 @@ export default function AccordionItem({
   return (
     <button className={`${styles["accordion-item"]} ${className ?? ""}`} {...props}>
       <div className={`${styles["accordion-item__container"]}`}>
-        <div className={`${styles["accordion-item__container-title"]}`}>{title}</div>
+        <div className={`${styles["accordion-item__container-title"]}`}>
+          <div className={`${styles["accordion-item__container-title-text"]}`}>{title}</div>
+
+          <div className={`${styles["accordion-item__container-title-icon"]}`}>icon here</div>
+        </div>
 
         <div className={`${styles["accordion-item__container-content"]}`}>{description}</div>
       </div>
